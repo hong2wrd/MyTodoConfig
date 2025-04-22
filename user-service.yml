@@ -1,6 +1,6 @@
 token:
   expiration_time: 864000000 
-  secret: user-service
+  secret: user-service1
 
 gateway:
   ip: 172.18.0.1
