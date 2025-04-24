@@ -1,6 +1,26 @@
+server:
+  port: 0
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: USER-SERVICE
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
 token:
   expiration_time: 864000000 
-  secret: user-service
+  secret: user-service1
 
 gateway:
   ip: 172.18.0.1
